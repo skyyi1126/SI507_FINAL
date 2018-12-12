@@ -112,6 +112,7 @@ def task2(player):
         file.write("keyword,num\n")
         for i in sorted(WORD_DICTION.items(), key=lambda item: item[1], reverse=True)[0:100]:
             file.write(i[0] + ", " + str(i[1]) + "\n")
+    return sorted(WORD_DICTION.items(), key=lambda item: item[1], reverse=True)[0:10]
 """
 for i in task1():
     print(i[0])
@@ -142,3 +143,5 @@ def task3(player):
     for i in results.fetchone():
         result_list.append(i)
     return result_list
+
+print(task2("Stephen Curry"))

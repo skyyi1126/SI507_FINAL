@@ -113,7 +113,6 @@ def populate_database(nba_player_list):
         cur.execute(statement, insertion)
     for i in nba_player_list:
         insert(i)
-
     conn.commit()
     conn.close()
 """
@@ -164,9 +163,9 @@ with open("date.txt", "w") as file:
 		time = datetime.fromtimestamp(int(cache.time_diction[i]))
 		file.write(str(time.year) + "/" + str(time.month) + "/" + str(time.day) + "\n")
 """
-
+"""
 cache.get_id()
 cache.get_time()
-"""
+
 cache.dump()
 """
